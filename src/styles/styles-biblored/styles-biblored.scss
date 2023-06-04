@@ -1,0 +1,43 @@
+:root {
+  // COLORES BIBLIO RED
+
+  --color-uno: #251536;
+  --color-dos: #5F249F;
+  --color-tres: #C1A7E2;
+  --color-cuatro: #444444;
+  --color-cinco: #C0B8C7;
+  --color-seis: #E6E2FD;
+  --color-siete: #F5F4FC;
+
+  --color-vieolet: #FCFFF5;
+  --color-purple: #FFF6F6;
+
+  --color-nav-bar: #5F249F;
+  --color-footer: #251536;
+
+
+}
+
+/****************
+Botones
+****************/
+.btn-color-primary {
+
+  background: var(--color-siete);
+  color: var(--color-uno);
+  padding: 5px 32px;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  margin-left: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
+}
+
+.btn-color-primary:hover {
+  background: var(--color-uno);
+  color: var(--color-siete);
+}
+
+.btn {
+  border: 1px solid var(--color-uno) !important;
+  border-radius: 100rem;
+}
