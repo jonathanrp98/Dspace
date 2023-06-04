@@ -1,11 +1,11 @@
-<footer class="text-lg-start">
-  <div *ngIf="showTopFooter" class="top-footer">
-    <!-- Grid container -->
+<footer class="text-lg-start py-5">
+  <!--<div *ngIf="showTopFooter" class="top-footer">
+    &lt;!&ndash; Grid container &ndash;&gt;
     <div class=" container p-4">
-      <!--Grid row-->
+      &lt;!&ndash;Grid row&ndash;&gt;
       <div class="row">
 
-        <!--Grid column-->
+        &lt;!&ndash;Grid column&ndash;&gt;
         <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
           <h5 class="text-uppercase">Footer Content</h5>
 
@@ -21,9 +21,9 @@
             </li>
           </ul>
         </div>
-        <!--Grid column-->
+        &lt;!&ndash;Grid column&ndash;&gt;
 
-        <!--Grid column-->
+        &lt;!&ndash;Grid column&ndash;&gt;
         <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
           <h5 class="text-uppercase">Footer Content</h5>
 
@@ -33,9 +33,9 @@
             </li>
           </ul>
         </div>
-        <!--Grid column-->
+        &lt;!&ndash;Grid column&ndash;&gt;
 
-        <!--Grid column-->
+        &lt;!&ndash;Grid column&ndash;&gt;
         <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
           <h5 class="text-uppercase">Footer Content</h5>
 
@@ -45,15 +45,39 @@
             voluptatem veniam, est atque cumque eum delectus sint!
           </p>
         </div>
-        <!--Grid column-->
+        &lt;!&ndash;Grid column&ndash;&gt;
       </div>
-      <!--Grid row-->
+      &lt;!&ndash;Grid row&ndash;&gt;
     </div>
-  </div>
+  </div>-->
   <!-- Grid container -->
 
   <!-- Copyright -->
-  <div class="bottom-footer p-1 d-flex justify-content-center align-items-center text-white">
+
+
+  <div class="container  text-white ">
+
+    <div class="row">
+      <div class="col-12 col-md-4">
+        <div class="w-100 h-100">
+          <a class=" my-2" routerLink="/home">
+            <img src="assets/images/imagesBiblored/logo_biblored.svg" [attr.alt]="'menu.header.image.logo' | translate" />
+          </a>
+          </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <ul class="list-inline text-left">
+          <li class="py-2">BibloRed</li>
+          <li>Biblioteca Digital de Bogotá</li>
+          <li class="py-2">Secretaría de Cultura Recreacion y Deporte</li>
+        </ul>
+      </div>
+      <div class="col-12 col-md-4">
+        Redes sociales
+      </div>
+    </div>
+  </div>
+ <!-- <div class="bottom-footer p-1 d-flex justify-content-center align-items-center text-white">
     <div class="content-container">
       <p class="m-0">
         <a class="text-white"
@@ -81,6 +105,6 @@
         </li>
       </ul>
     </div>
-  </div>
+  </div>-->
   <!-- Copyright -->
 </footer>
