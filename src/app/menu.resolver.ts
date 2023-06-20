@@ -1,24 +1,24 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
-import { combineLatest as observableCombineLatest, combineLatest, Observable } from 'rxjs';
-import { MenuID } from './shared/menu/menu-id.model';
-import { MenuState } from './shared/menu/menu-state.model';
-import { MenuItemType } from './shared/menu/menu-item-type.model';
-import { LinkMenuItemModel } from './shared/menu/menu-item/models/link.model';
-import { getFirstCompletedRemoteData } from './core/shared/operators';
-import { PaginatedList } from './core/data/paginated-list.model';
-import { BrowseDefinition } from './core/shared/browse-definition.model';
-import { RemoteData } from './core/data/remote-data';
-import { TextMenuItemModel } from './shared/menu/menu-item/models/text.model';
-import { BrowseService } from './core/browse/browse.service';
-import { MenuService } from './shared/menu/menu.service';
-import { filter, find, map, take } from 'rxjs/operators';
-import { hasValue } from './shared/empty.util';
-import { FeatureID } from './core/data/feature-authorization/feature-id';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
+import {combineLatest as observableCombineLatest, combineLatest, Observable} from 'rxjs';
+import {MenuID} from './shared/menu/menu-id.model';
+import {MenuState} from './shared/menu/menu-state.model';
+import {MenuItemType} from './shared/menu/menu-item-type.model';
+import {LinkMenuItemModel} from './shared/menu/menu-item/models/link.model';
+import {getFirstCompletedRemoteData} from './core/shared/operators';
+import {PaginatedList} from './core/data/paginated-list.model';
+import {BrowseDefinition} from './core/shared/browse-definition.model';
+import {RemoteData} from './core/data/remote-data';
+import {TextMenuItemModel} from './shared/menu/menu-item/models/text.model';
+import {BrowseService} from './core/browse/browse.service';
+import {MenuService} from './shared/menu/menu.service';
+import {filter, find, map, take} from 'rxjs/operators';
+import {hasValue} from './shared/empty.util';
+import {FeatureID} from './core/data/feature-authorization/feature-id';
 import {
   ThemedCreateCommunityParentSelectorComponent
 } from './shared/dso-selector/modal-wrappers/create-community-parent-selector/themed-create-community-parent-selector.component';
-import { OnClickMenuItemModel } from './shared/menu/menu-item/models/onclick.model';
+import {OnClickMenuItemModel} from './shared/menu/menu-item/models/onclick.model';
 import {
   ThemedCreateCollectionParentSelectorComponent
 } from './shared/dso-selector/modal-wrappers/create-collection-parent-selector/themed-create-collection-parent-selector.component';
@@ -37,8 +37,8 @@ import {
 import {
   ExportMetadataSelectorComponent
 } from './shared/dso-selector/modal-wrappers/export-metadata-selector/export-metadata-selector.component';
-import { AuthorizationDataService } from './core/data/feature-authorization/authorization-data.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import {AuthorizationDataService} from './core/data/feature-authorization/authorization-data.service';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {
   METADATA_EXPORT_SCRIPT_NAME,
   METADATA_IMPORT_SCRIPT_NAME,
@@ -92,6 +92,7 @@ export class MenuResolver implements Resolve<boolean> {
    * Initialize all menu sections and items for {@link MenuID.PUBLIC}
    */
   createPublicMenu$(): Observable<boolean> {
+    /* TODO ajustar id */
     const menuList: any[] = [
       /* Communities & Collections tree */
       {
@@ -101,11 +102,46 @@ export class MenuResolver implements Resolve<boolean> {
         index: 0,
         model: {
           type: MenuItemType.LINK,
-          text: `menu.section.browse_global_communities_and_collections`,
+          text: `Colecciones`,
           link: `/community-list`
         } as LinkMenuItemModel
       }
     ];
+    menuList.push({
+      id: `browse_global_communities_and_collections1`,
+      active: false,
+      visible: true,
+      index: 0,
+      model: {
+        type: MenuItemType.LINK,
+        text: `Descubre`,
+        link: `/community-list`
+      } as LinkMenuItemModel
+    });
+
+    menuList.push({
+      id: `browse_global_communities_and_collections2`,
+      active: false,
+      visible: true,
+      index: 0,
+      model: {
+        type: MenuItemType.LINK,
+        text: `Sobre nosotros`,
+        link: `/community-list`
+      } as LinkMenuItemModel
+    });
+
+    menuList.push({
+      id: `browse_global_communities_and_collections3`,
+      active: false,
+      visible: true,
+      index: 0,
+      model: {
+        type: MenuItemType.LINK,
+        text: `Ayuda`,
+        link: `/community-list`
+      } as LinkMenuItemModel
+    });
     // Read the different Browse-By types from config and add them to the browse menu
     this.browseService.getBrowseDefinitions()
       .pipe(getFirstCompletedRemoteData<PaginatedList<BrowseDefinition>>())
@@ -142,7 +178,6 @@ export class MenuResolver implements Resolve<boolean> {
           shouldPersistOnRouteChange: true
         })));
       });
-
     return this.waitForMenu$(MenuID.PUBLIC);
   }
 

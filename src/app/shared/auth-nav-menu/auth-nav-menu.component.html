@@ -1,5 +1,5 @@
 <ul class="navbar-nav" [ngClass]="{'mr-auto': (isXsOrSm$ | async)}">
-  <li *ngIf="!(isAuthenticated | async) && !(isXsOrSm$ | async) && (showAuth | async)" class="nav-item"
+<!--  <li *ngIf="!(isAuthenticated | async) && !(isXsOrSm$ | async) && (showAuth | async)" class="nav-item"
       (click)="$event.stopPropagation();">
     <div ngbDropdown #loginDrop display="dynamic" placement="bottom-right" class="d-inline-block" @fadeInOut>
       <a href="javascript:void(0);" class="dropdownLogin px-1" [attr.aria-label]="'nav.login' |translate"
@@ -11,7 +11,7 @@
           [isStandalonePage]="false"></ds-log-in>
       </div>
     </div>
-  </li>
+  </li>-->
   <!--<li *ngIf="!(isAuthenticated | async) && (isXsOrSm$ | async)" class="nav-item">
     <a routerLink="/login" routerLinkActive="active" class="loginLink px-1">
       {{ 'nav.login' | translate }}<span class="sr-only">(current)</span>

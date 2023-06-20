@@ -13,7 +13,7 @@ import { MenuItemType } from '../shared/menu/menu-item-type.model';
         path: '',
         component: ThemedHomePageComponent,
         pathMatch: 'full',
-        data: {
+        /*data: {
           title: 'home.title',
           menu: {
             public: [{
@@ -28,7 +28,7 @@ import { MenuItemType } from '../shared/menu/menu-item-type.model';
               } as LinkMenuItemModel,
             }],
           },
-        },
+        },*/
         resolve: {
           site: HomePageResolver
         }
