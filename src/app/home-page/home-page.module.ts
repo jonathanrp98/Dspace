@@ -12,6 +12,9 @@ import { ThemedHomePageComponent } from './themed-home-page.component';
 import { RecentItemListComponent } from './recent-item-list/recent-item-list.component';
 import { JournalEntitiesModule } from '../entity-groups/journal-entities/journal-entities.module';
 import { ResearchEntitiesModule } from '../entity-groups/research-entities/research-entities.module';
+import { TypeContentComponent } from './type-content/type-content.component';
+import { PageDataComponent } from './page-data/page-data.component';
+import { FrequentQuestionsComponent } from './frequent-questions/frequent-questions.component';
 
 const DECLARATIONS = [
   HomePageComponent,
@@ -19,7 +22,10 @@ const DECLARATIONS = [
   TopLevelCommunityListComponent,
   ThemedHomeNewsComponent,
   HomeNewsComponent,
-  RecentItemListComponent
+  RecentItemListComponent,
+  TypeContentComponent,
+  PageDataComponent,
+  FrequentQuestionsComponent
 ];
 
 @NgModule({

@@ -112,10 +112,6 @@ Botones
   font-family: var(--f-workSans-semiBold);
   font-size: var(--fs-h5) !important;
   padding: 5px 32px;
-  /*margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
-  margin-left: 0.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;*/
 }
 
 .btn-color-primary:hover {
@@ -123,10 +119,15 @@ Botones
   color: var(--color-siete);
 }
 
-.btn {
+.btn-bibliored {
   border: 1px solid var(--color-uno) !important;
-  // border-radius: 100rem;
+  border-radius: 100rem;
 }
+
+.btn-primary-secundary {
+  background-color: var(--color-dos) !important;
+}
+
 
 
 .btn-tags {
@@ -157,6 +158,3 @@ Botones
   padding: 0 5px;
 }
 
-.btn-primary-biblored {
-  background-color: #5F249F !important;
-}
