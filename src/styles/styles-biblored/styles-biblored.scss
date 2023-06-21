@@ -33,33 +33,42 @@
   --fs-tags: 12px; // Tags
 }
 
-
-// WorkSans-Regular
+/****************
+WorkSans-Regular
+****************/
 .fs-workSans-regular {
   font-family: var(--f-workSans-regular);
   font-size: var(--fs-works-sans) !important;
 }
 
-// WorkSans-SemiBold
+/****************
+WorkSans-SemiBold
+****************/
 .fs-workSans-semiBold {
   font-family: var(--f-workSans-semiBold);
   font-size: var(--fs-works-sans) !important;
 }
 
-// WorkSans-Bold
+/****************
+WorkSans-Bold
+****************/
 .fs-workSans-bold {
   font-family: var(--f-workSans-bold);
   font-size: var(--fs-works-sans) !important;
 }
 
 
-// WorkSans-BlackItalic
+/****************
+WorkSans-BlackItalic
+****************/
 .fs-workSans-blackitalic {
   font-family: var(--f-workSans-blackitalic);
   font-size: var(--fs-works-sans) !important;
 }
 
-// Montserrat-Bold h1 - h5
+/****************
+Montserrat-Bold h1 - h5
+****************/
 .fs-montserrat-bold-h1 {
   font-family: var(--f-montserrat-bold);
   font-size: var(--fs-h1) !important;
@@ -85,14 +94,18 @@
   font-size: var(--fs-h5) !important;
 }
 
-// Titulos biblored
+/****************
+Titulos biblored
+****************/
 .fs-titulo-biblored {
   font-family: var(--f-montserrat-bold);
   font-size: var(--fs-h1) !important;
   letter-spacing: -3px
 }
 
-// parrafo
+/****************
+parrafo
+****************/
 .fs-parrafo {
   font-family: var(--f-montserrat-bold);
   font-size: var(--fs-h1) !important;
@@ -102,6 +115,24 @@
   font-family: var(--f-workSans-semiBold);
   font-size: var(--fs-tags) !important;
 }
+
+/****************
+Links
+****************/
+.link-fraquent-questions{
+  cursor: pointer;
+  text-decoration: none;
+  // color: var(--color-uno) !important;
+  color: var(--color-dos) !important;
+  font-weight: 600;
+}
+
+.link-fraquent-questions:hover {
+  color: var(--color-dos) !important;
+  text-decoration: underline;
+}
+
+
 
 /****************
 Botones
