@@ -40,6 +40,7 @@ import {
 import { ServerCheckGuard } from './core/server-check/server-check.guard';
 import { MenuResolver } from './menu.resolver';
 import { ThemedPageErrorComponent } from './page-error/themed-page-error.component';
+import {DiscoverPageModule} from "./discover-page/discover-page.module";
 
 @NgModule({
   imports: [
@@ -235,6 +236,29 @@ import { ThemedPageErrorComponent } from './page-error/themed-page-error.compone
             loadChildren: () => import('./subscriptions-page/subscriptions-page-routing.module')
               .then((m) => m.SubscriptionsPageRoutingModule),
             canActivate: [AuthenticatedGuard]
+          },
+
+          /*enlace  Bibliored*/
+          {
+            path: 'help',
+            loadChildren: () => import('./help-page/help-page.module')
+              .then((m) => m.HelpPageModule),
+            data: { showBreadcrumbs: false },
+            canActivate: [EndUserAgreementCurrentUserGuard]
+          },
+          {
+            path: 'about-us',
+            loadChildren: () => import('./about-us-page/about-us-page.module')
+              .then((m) => m.AboutUsPageModule),
+            data: { showBreadcrumbs: false },
+            canActivate: [EndUserAgreementCurrentUserGuard]
+          },
+          {
+            path: 'discover',
+            loadChildren: () => import('./discover-page/discover-page.module')
+              .then((m) => m.DiscoverPageModule),
+            data: { showBreadcrumbs: false },
+            canActivate: [EndUserAgreementCurrentUserGuard]
           },
           { path: '**', pathMatch: 'full', component: ThemedPageNotFoundComponent },
         ]

@@ -115,7 +115,7 @@ export class MenuResolver implements Resolve<boolean> {
       model: {
         type: MenuItemType.LINK,
         text: `Descubre`,
-        link: `/community-list`
+        link: `/discover`
       } as LinkMenuItemModel
     });
 
@@ -127,7 +127,7 @@ export class MenuResolver implements Resolve<boolean> {
       model: {
         type: MenuItemType.LINK,
         text: `Sobre nosotros`,
-        link: `/community-list`
+        link: `/about-us`
       } as LinkMenuItemModel
     });
 
@@ -139,7 +139,7 @@ export class MenuResolver implements Resolve<boolean> {
       model: {
         type: MenuItemType.LINK,
         text: `Ayuda`,
-        link: `/community-list`
+        link: `/help`
       } as LinkMenuItemModel
     });
     // Read the different Browse-By types from config and add them to the browse menu
