@@ -4,7 +4,7 @@
 @import '../../../styles/_global-styles.scss';
 
 .facet-filter, .setting-option {
-  background-color: var(--bs-light);
+  background-color: var(--color-siete);
   border-radius: var(--bs-border-radius);
 
   &.p-3 {
@@ -14,7 +14,7 @@
   }
 
   .badge-secondary {
-    background-color: var(--bs-primary);
+    background-color: var(--color-tres);
   }
 
   h5 {

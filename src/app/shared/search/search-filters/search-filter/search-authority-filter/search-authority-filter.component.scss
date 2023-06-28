@@ -1,6 +1,6 @@
 .filters {
     a {
-        color: var(--bs-body-color);
+        color: var(--color-dos);
         &:hover, &:focus {
           text-decoration: none;
         }
@@ -9,7 +9,7 @@
         }
     }
     .toggle-more-filters a {
-        color: var(--bs-link-color);
+        color: var(--color-dos);
         text-decoration: underline;
         cursor: pointer;
     }

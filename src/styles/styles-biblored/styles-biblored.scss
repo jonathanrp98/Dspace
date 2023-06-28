@@ -7,8 +7,8 @@
   --color-cinco: #C0B8C7;
   --color-seis: #E6E2FD;
   --color-siete: #F5F4FC;
- /* --color-vieolet: #6435C9;
-  --color-purple: #A333C8;*/
+  /* --color-vieolet: #6435C9;
+   --color-purple: #A333C8;*/
   --color-nav-bar: #5F249F; // navbar
   --color-footer: #251536; // footer
 
@@ -34,11 +34,66 @@
 }
 
 /****************
+Font size
+****************/
+
+.font-size-h1{
+  font-size: var(--fs-h1) !important;
+}
+
+.font-size-h2{
+  font-size: var(--fs-h2) !important;
+}
+
+.font-size-h3{
+  font-size: var(--fs-h3) !important;
+}
+
+.font-size-h4{
+  font-size: var(--fs-h4) !important;
+}
+
+.font-size-h5{
+  font-size: var(--fs-h5) !important;
+}
+
+/****************
+Text color
+****************/
+.text-color-uno {
+  color: var(--color-uno);
+}
+
+.text-color-dos {
+  color: var(--color-dos);
+}
+
+.text-color-tres {
+  color: var(--color-tres);
+}
+
+.text-color-cuatro {
+  color: var(--color-cuatro);
+}
+
+.text-color-cinco {
+  color: var(--color-cinco);
+}
+
+.text-color-seis {
+  color: var(--color-seis);
+}
+
+.text-color-siete {
+  color: var(--color-siete);
+}
+
+/****************
 WorkSans-Regular
 ****************/
 .fs-workSans-regular {
   font-family: var(--f-workSans-regular);
-  font-size: var(--fs-works-sans) !important;
+  // font-size: var(--fs-works-sans) !important;
 }
 
 /****************
@@ -46,7 +101,7 @@ WorkSans-SemiBold
 ****************/
 .fs-workSans-semiBold {
   font-family: var(--f-workSans-semiBold);
-  font-size: var(--fs-works-sans) !important;
+  // font-size: var(--fs-works-sans) !important;
 }
 
 /****************
@@ -54,7 +109,7 @@ WorkSans-Bold
 ****************/
 .fs-workSans-bold {
   font-family: var(--f-workSans-bold);
-  font-size: var(--fs-works-sans) !important;
+  // font-size: var(--fs-works-sans) !important;
 }
 
 
@@ -63,7 +118,7 @@ WorkSans-BlackItalic
 ****************/
 .fs-workSans-blackitalic {
   font-family: var(--f-workSans-blackitalic);
-  font-size: var(--fs-works-sans) !important;
+  // font-size: var(--fs-works-sans) !important;
 }
 
 /****************
@@ -111,7 +166,7 @@ parrafo
   font-size: var(--fs-h1) !important;
 }
 
-.fs-tags{
+.fs-tags {
   font-family: var(--f-workSans-semiBold);
   font-size: var(--fs-tags) !important;
 }
@@ -119,7 +174,7 @@ parrafo
 /****************
 Links
 ****************/
-.link-fraquent-questions{
+.link-fraquent-questions {
   cursor: pointer;
   text-decoration: none;
   // color: var(--color-uno) !important;
@@ -131,7 +186,6 @@ Links
   color: var(--color-dos) !important;
   text-decoration: underline;
 }
-
 
 
 /****************
@@ -150,6 +204,31 @@ Botones
   color: var(--color-siete);
 }
 
+.btn-color-secundary {
+  background: var(--color-siete);
+  color: var(--color-dos);
+  font-family: var(--f-workSans-semiBold);
+  font-size: var(--fs-h5) !important;
+  padding: 5px 32px;
+}
+
+.btn-color-secundary:hover {
+  background: var(--color-dos);
+  color: var(--color-siete);
+}
+
+.btn-color-three {
+  background: var(--color-dos);
+  color: var(--color-siete);
+  font-family: var(--f-workSans-semiBold);
+  font-size: var(--fs-h5) !important;
+  padding: 5px 32px;
+}
+
+.btn-color-three:hover {
+  background: var(--color-siete);
+  color: var(--color-dos);
+}
 .btn-bibliored {
   border: 1px solid var(--color-uno) !important;
   border-radius: 100rem;
@@ -158,7 +237,6 @@ Botones
 .btn-primary-secundary {
   background-color: var(--color-dos) !important;
 }
-
 
 
 .btn-tags {

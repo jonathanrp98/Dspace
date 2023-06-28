@@ -4310,7 +4310,7 @@
   "pagination.results-per-page": "Resultados por página",
 
   // "pagination.showing.detail": "{{ range }} of {{ total }}",
-  "pagination.showing.detail": "{{ range }} de {{ total }}",
+  "pagination.showing.detail": "{{ range }} de {{ total }} resultados",
 
   // "pagination.showing.label": "Now showing ",
   "pagination.showing.label": "Mostrando ",

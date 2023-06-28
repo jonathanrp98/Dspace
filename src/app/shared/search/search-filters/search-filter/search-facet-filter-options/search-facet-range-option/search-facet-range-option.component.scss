@@ -1,8 +1,8 @@
 a {
-    color: var(--bs-link-color);
+    color: var(--color-dos);
     &:hover {
         text-decoration: underline;
-        color: var(--bs-link-hover-color);
+        color: var(--color-dos);
 
     }
     span.badge {
