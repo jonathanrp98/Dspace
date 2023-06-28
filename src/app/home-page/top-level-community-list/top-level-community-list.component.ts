@@ -1,18 +1,18 @@
-import { ChangeDetectionStrategy, Component, OnInit, OnDestroy, Inject } from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit, OnDestroy, Inject} from '@angular/core';
 
-import { BehaviorSubject, combineLatest as observableCombineLatest, Subscription } from 'rxjs';
+import {BehaviorSubject, combineLatest as observableCombineLatest, Subscription} from 'rxjs';
 
-import { SortDirection, SortOptions } from '../../core/cache/models/sort-options.model';
-import { CommunityDataService } from '../../core/data/community-data.service';
-import { PaginatedList } from '../../core/data/paginated-list.model';
-import { RemoteData } from '../../core/data/remote-data';
-import { Community } from '../../core/shared/community.model';
-import { fadeInOut } from '../../shared/animations/fade';
-import { PaginationComponentOptions } from '../../shared/pagination/pagination-component-options.model';
-import { hasValue } from '../../shared/empty.util';
-import { switchMap } from 'rxjs/operators';
-import { PaginationService } from '../../core/pagination/pagination.service';
-import { AppConfig, APP_CONFIG } from 'src/config/app-config.interface';
+import {SortDirection, SortOptions} from '../../core/cache/models/sort-options.model';
+import {CommunityDataService} from '../../core/data/community-data.service';
+import {PaginatedList} from '../../core/data/paginated-list.model';
+import {RemoteData} from '../../core/data/remote-data';
+import {Community} from '../../core/shared/community.model';
+import {fadeInOut} from '../../shared/animations/fade';
+import {PaginationComponentOptions} from '../../shared/pagination/pagination-component-options.model';
+import {hasValue} from '../../shared/empty.util';
+import {switchMap} from 'rxjs/operators';
+import {PaginationService} from '../../core/pagination/pagination.service';
+import {AppConfig, APP_CONFIG} from 'src/config/app-config.interface';
 
 /**
  * this component renders the Top-Level Community list
@@ -51,6 +51,9 @@ export class TopLevelCommunityListComponent implements OnInit, OnDestroy {
    */
   currentPageSubscription: Subscription;
 
+
+  images: string[];
+
   constructor(
     @Inject(APP_CONFIG) protected appConfig: AppConfig,
     private cds: CommunityDataService,
@@ -61,6 +64,10 @@ export class TopLevelCommunityListComponent implements OnInit, OnDestroy {
     this.config.pageSize = appConfig.homePage.topLevelCommunityList.pageSize;
     this.config.currentPage = 1;
     this.sortConfig = new SortOptions('dc.title', SortDirection.ASC);
+    this.images = ["https://coleccionesdigitales.biblored.gov.co/files/fullsize/8162d553a01363530f7153abc93360d3.jpg",
+      "https://coleccionesdigitales.biblored.gov.co/files/fullsize/03a01d64fb0a9b40eb6ed80a87ef5b63.jpg",
+      "https://coleccionesdigitales.biblored.gov.co/files/fullsize/aa77463ff92caa88c78656d1c6b60b15.jpg",
+      "https://coleccionesdigitales.biblored.gov.co/files/fullsize/5a844aa00e5abcd3baa272bfb408b558.jpg"]
   }
 
   ngOnInit() {
